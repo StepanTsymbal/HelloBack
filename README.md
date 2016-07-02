@@ -8,7 +8,7 @@ RESTful App was created on Spring Boot. PostgreSQL is used. Parametres for launc
     DB login: 'postgres'
     DB password: 'postgres'
 
-You may use these parametres. In order to use own ones you have change 'application.properties' file
+You may use these parametres. In order to use own ones you have to change 'application.properties' file
 
 Application processes table 'Contacts'. It will be created in case of its absence.
 
