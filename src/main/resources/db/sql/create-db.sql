@@ -1,0 +1,6 @@
+--DROP TABLE users IF EXISTS;
+
+CREATE TABLE IF NOT EXISTS Contacts (
+  id INTEGER,
+  name VARCHAR(50)
+);
