@@ -31,15 +31,15 @@ public class ContactsController {
 	public WebAsyncTask<ResponseEntity<List<Contacts>>> handleTestRequest(
 			@RequestParam("nameFilter") String nameFilter) {
 
-		List<Contacts> filteredContacts = new ArrayList<Contacts>();
-
 		Callable<ResponseEntity<List<Contacts>>> callable = new Callable<ResponseEntity<List<Contacts>>>() {
 
 			@Override
 			public ResponseEntity<List<Contacts>> call() throws InterruptedException {
 
+				List<Contacts> filteredContacts = new ArrayList<Contacts>();
+				Pattern pattern = Pattern.compile(nameFilter);
+
 				for (Contacts contact : contactsRepository.findAll()) {
-					Pattern pattern = Pattern.compile(nameFilter);
 					Matcher matcher = pattern.matcher(contact.getName());
 
 					if (!matcher.matches()) {
