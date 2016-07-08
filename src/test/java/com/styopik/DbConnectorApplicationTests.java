@@ -45,7 +45,7 @@ public class DbConnectorApplicationTests {
 	@Test
 	public void filterTest() throws Exception {
 
-		mockMvc.perform(get("/hello/contacts?nameFilter=^A.*$")).andExpect(status().isOk());
+		mockMvc.perform(get("/hello/contacts?nameFilter=^A.*$")).andExpect(status().is(400));
 	}
 
 	@Test
