@@ -1,6 +1,12 @@
 # HelloBack
 
-RESTful App was created on Spring Boot. PostgreSQL is used. Parametres for launching:
+RESTful App was created on Spring Boot.
+
+Returns Contacts which match the pattern.
+
+PostgreSQL is used.
+
+Parametres for launching:
 
     Server port: 8181
     DB name: 'ContactsDB' (it must be created)
